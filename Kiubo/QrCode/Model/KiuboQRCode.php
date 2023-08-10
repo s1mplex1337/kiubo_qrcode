@@ -4,7 +4,7 @@ namespace Kiubo\QrCode\Model;
 use Kiubo\QrCode\Api\QRCodeInterface;
 use Endroid\QrCode\QrCode;
 
-class QRCode implements QRCodeInterface
+class KiuboQRCode implements QRCodeInterface
 {
     public function generateQRCode($url)
     {
