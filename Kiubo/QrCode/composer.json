@@ -1,0 +1,24 @@
+{
+    "name": "kiubo/module-qrcode",
+    "description": "A Module to create QR Code links to scan with mobile phones on product pages",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "endroid/qr-code": "^3.7"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kiubo\\QrCode\\": ""
+        }
+    }
+}

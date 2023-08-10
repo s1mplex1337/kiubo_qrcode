@@ -1,0 +1,6 @@
+<?php
+$qrCodeUrl = $block->getQRCodeUrl();
+if ($qrCodeUrl):
+?>
+    <img src="<?= $qrCodeUrl ?>" alt="QR Code" />
+<?php endif; ?>
