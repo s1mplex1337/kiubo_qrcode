@@ -3,7 +3,7 @@ namespace Kiubo\QrCode\Model;
 
 use Kiubo\QrCode\Api\QRCodeInterface;
 use Endroid\QrCode\QrCode;
-use Endroid\QrCode\Response\QrCodeResponse;
+use Endroid\QrCode\Writer\PngWriter;
 
 class KiuboQRCode implements QRCodeInterface
 {
@@ -12,7 +12,10 @@ class KiuboQRCode implements QRCodeInterface
         //$qrCode = new QrCode($url);
         //return $qrCode->writeDataUri();
         $qrCode = QrCode::create($url);
-        $dataUri = $qrCode->writeDataUri();
+        $writer = new PngWriter();
+
+        // Generate the data URI
+        $dataUri = $writer->write($qrCode)->getDataUri();
 
         return $dataUri;
     }
