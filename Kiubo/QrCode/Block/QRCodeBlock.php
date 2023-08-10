@@ -26,7 +26,8 @@ class QRCodeBlock extends Template
     public function getQRCodeUrl()
     {
         $product = $this->getProduct();
-        $urlAttribute = $product->getCustomAttribute('3d_url'); // Replace with your attribute code
+        $urlAttribute = $product->getCustomAttribute('attr_3d_url'); // Replace with your attribute code
+        var_dump($urlAttribute); // Debugging line
 
         if ($urlAttribute && $url = $urlAttribute->getValue()) {
             return $this->qrCode->generateQRCode($url);
